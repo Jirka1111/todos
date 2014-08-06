@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf8">
+  <meta name="viewport" content="width=device-width">
+  <title>My Steroids App</title>
+
+  <!--<link rel="stylesheet" href="/vendor/ionic/css/ionic.css" />-->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="stylesheets/application.css" />
+
+  <script src="/javascripts/onerror.js"></script>
+  <script src="/javascripts/console.log.js"></script>
+  <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
+  <script src='https://cdn.firebase.com/js/simple-login/1.6.1/firebase-simple-login.js'></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
+  <script src="javascripts/application.js"></script>
+
+  <!-- cordova.js is served from localhost to ensure the correct version -->
+  <script src="http://localhost/cordova.js"></script>
+  <script src="/components/steroids-js/steroids.js"></script>
+
+  <script src="/javascripts/application.js"></script>
+</head>
+<body data-ng-app="Task">
+<div class="page-container" data-ng-controller="TaskCtrl">
+
+    <div class="form">
+        <h2>Login</h2>
+        <!--<small>Try user@email.com | password OR person@email.com | password</small>-->
+        <br />
+        <input type="text" class="txt" data-ng-model="user.email" />
+        <br />
+        <input type="password" class="txt" data-ng-model="user.password" />
+        <br />
+        <button class="bt bt-achieve bt-auto" data-ng-click="login()">Login</button>
+        <!--<br />-->
+        <button class="bt bt-achieve bt-auto" data-ng-click="logout()">Logout</button>
+        <button class="bt bt-achieve bt-auto" data-ng-click="register(user)">Register</button>
+    </div>
+
+    <h2>Incomplete Tasks</h2>
+    <ul class="todo-list" data-ng-repeat="task in tasks track by $index">
+        <li>
+            <span>{{ task.value.title }}</span>
+            <button class="bt bt-achieve" ng-click="done($event, task)">Done</button>
+        </li>
+    </ul>
+    <ul class="add-todo">
+        <li>
+            <input type="text"
+                   class="txt"
+                   data-ng-model="newTask"
+                   placeholder="New Todo"
+                   data-ng-keyup="add($event)" />
+        </li>
+    </ul>
+
+</div>
+
+
+</body>
+
+</html>

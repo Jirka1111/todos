@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'Gotham Thin';
+    src: url("../vendor/Gotham-Thin.otf") format("opentype");
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Gotham Thin', 'Roboto', Arial;
+    color: #1ABC9C;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background: #322f31;
+    background-origin: padding-box;
+    background-size: auto;
+}
+
+.page-container {
+    background: #322f31;
+    box-sizing: border-box;
+    font-family: 'Gotham Thin', 'Roboto', Arial;
+    color: #1ABC9C;
+}
+
+.achieve {
+    color: #1ABC9C;
+}
+
+.bt {
+    width: 60px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 10px;
+}
+
+.bt-auto {
+    width: auto;
+}
+
+.bt.bt-achieve {
+    background: #1ABC9C;
+    color: #322f31;
+}
+
+.txt {
+    background: transparent;
+    width: 100%;
+    padding: 10px;
+    margin: 4px 0;
+    border: 1px solid #1ABC9C;
+    width: 90%;
+    font-size: 16px;
+    position: relative;
+    min-height: 100%;
+    color: #1ABC9C;
+}
+
+.form {
+    text-align:left;
+    border-bottom: 1px solid #1ABC9C;
+    padding-bottom: 20px;
+}
+
+.page-container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-container h2 {
+    text-align: center;
+    font-weight: 900;
+}
+
+.add-todo .txt {
+    padding: 10px;
+}
+
+.todo-list, .add-todo {
+    list-style-type: none;
+    text-align: left;
+}
+
+.todo-list li {
+    padding: 10px 80px 10px 10px;
+    margin: 4px 0;
+    border: 1px solid #1ABC9C;
+    width: 90%;
+    position: relative;
+    min-height: 100%;
+    cursor: pointer;
+}
+
+.todo-list li .bt {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    transition: width 0.4s ease-in-out;
+}
+
+.todo-list li .bt:hover {
+    width: 80px;
+}
